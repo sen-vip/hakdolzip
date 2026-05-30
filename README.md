@@ -21,7 +21,9 @@ Under the following terms:
 https://creativecommons.org/licenses/by-nc/4.0/legalcode.ko
 
 ────────────────────────────────────────────────────────────
+
 Disclaimer (면책)
+
 본 자료는 학교 행정실 업무 학습·참고용으로 제작되었으며,
 실제 업무 적용 시에는 소속 교육청·학교의 최신 지침과 관련 법령을
 반드시 확인하시기 바랍니다.
