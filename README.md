@@ -11,7 +11,7 @@
 
 ## 🔗 바로가기
 
-https://sen-vip.github.io/hakdol_routine.zip/
+https://sen-vip.github.io/hakdol-routine/
 
 ## ✨ 주요 기능
 
