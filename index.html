@@ -71,7 +71,7 @@ h1{font-size:22px;margin:0 0 4px 0;letter-spacing:-.03em;color:#0f172a}
 .side{border:1px solid #e5eaf2;border-radius:16px;padding:12px;background:#fff;height:fit-content;position:sticky;top:76px;box-shadow:0 8px 22px rgba(15,23,42,.035)}
 .side h3{font-size:12.5px;color:#0f172a;margin:8px 6px 8px 6px;font-weight:850;letter-spacing:-.01em}
 .side-hint{margin:0 4px 8px 4px;font-size:11.5px;color:var(--muted2);line-height:1.45}
-.side .item{display:flex;justify-content:space-between;align-items:center;padding:10px 10px;border-radius:10px;cursor:pointer;font-size:15px;color:#334155;line-height:1.4}
+.side .item{display:flex;justify-content:space-between;align-items:center;padding:9px 10px;border-radius:10px;cursor:pointer;font-size:14px;color:#334155;line-height:1.4}
 .side .item:hover{background:var(--bg-soft)}
 .side .item.active{background:#eff6ff;color:var(--primary);font-weight:600}
 .side .item.is-multi-selected{background:#eff6ff;color:var(--primary);font-weight:650}
@@ -109,29 +109,50 @@ h1{font-size:22px;margin:0 0 4px 0;letter-spacing:-.03em;color:#0f172a}
 .new-month-note{display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border-radius:999px;background:#f8fafc;color:#64748b;border:1px solid #e5eaf2;font-size:11.5px}
 .new-month-note button{border:0;background:transparent;color:#1d4ed8;font-weight:750;cursor:pointer;padding:0;font-family:inherit;font-size:11.5px}
 .check-cell{display:flex;align-items:flex-start;justify-content:center;padding-top:1px}
-.routine-check{appearance:none;-webkit-appearance:none;width:18px;height:18px;border:1.5px solid #cbd5e1;border-radius:6px;background:#fff;cursor:pointer;display:grid;place-content:center;transition:.15s ease}
-.routine-check:hover{border-color:#93b7ed;background:#f8fbff}
-.routine-check:checked{border-color:#2563eb;background:#2563eb}
-.routine-check:checked::after{content:'✓';color:#fff;font-size:13px;font-weight:900;line-height:1}
-.row.is-checked{background:#fbfdff}
-.row.is-checked .task-name,.row.is-checked .task-detail,.row.is-checked .date,.row.is-checked .memo-cell{color:#94a3b8}
-.row.is-checked .cat{opacity:.58}
+.routine-check{appearance:none;-webkit-appearance:none;width:18px;height:18px;border:1.5px solid #cbd5e1;border-radius:5px;background:#fff;cursor:pointer;display:grid;place-content:center;transition:border-color .15s ease,background .15s ease,box-shadow .15s ease}
+.routine-check:hover{border-color:#93b7ed;background:#f0f7ff}
+.routine-check:checked{border-color:#2563eb;background:#2563eb;box-shadow:0 1px 4px rgba(37,99,235,.25)}
+.routine-check:checked::after{content:'';display:block;width:4px;height:8px;border:2px solid #fff;border-top:none;border-left:none;transform:rotate(42deg) translate(0,-1px);border-radius:1px}
+.row.is-checked{background:#fff}
+.row.is-checked .task-name{color:#94a3b8;text-decoration:line-through;text-decoration-color:#cbd5e1}
+.row.is-checked .task-detail,.row.is-checked .date,.row.is-checked .memo-cell{color:#b0bec5}
+.row.is-checked .cat{opacity:.45}
+.row.is-checked .user-memo-input{opacity:.55}
 
-.thead{position:sticky;top:126px;z-index:69;display:grid;grid-template-columns:54px 120px 100px 1.6fr 1.4fr;gap:12px;padding:11px 16px;font-size:12.5px;color:#475569;background:rgba(248,250,252,.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #e5eaf2;font-weight:800}
-.row{display:grid;grid-template-columns:54px 120px 100px 1.6fr 1.4fr;gap:12px;padding:14px 16px;border-bottom:1px solid #f1f5f9;align-items:start;background:#fff}
+.thead{position:sticky;top:126px;z-index:69;display:grid;grid-template-columns:54px 120px 100px 1.6fr 1.4fr;gap:12px;padding:9px 16px;font-size:11.5px;color:#94a3b8;background:rgba(248,250,252,.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:0.5px solid #e5eaf2;font-weight:600;letter-spacing:.01em}
+.row{display:grid;grid-template-columns:54px 120px 100px 1.6fr 1.4fr;gap:12px;padding:10px 16px;border-bottom:0.5px solid #f1f5f9;align-items:start;background:#fff}
 .row:hover{background:#fafbfc}
-.row .date{font-size:15.5px;color:#1e293b;font-weight:800;letter-spacing:-.02em}
+.row .date{font-size:14px;color:#1e293b;font-weight:700;letter-spacing:-.01em}
 .cat{display:inline-block;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:600;line-height:1.4}
-.task-name{font-weight:850;font-size:16px;color:#0f172a;margin-bottom:5px;letter-spacing:-.025em;line-height:1.42}
-.task-detail{font-size:14.8px;color:#64748b;white-space:pre-wrap;line-height:1.58}
+.task-name{font-weight:700;font-size:15px;color:#0f172a;margin-bottom:3px;letter-spacing:-.02em;line-height:1.42}
+.task-detail{font-size:13px;color:#64748b;white-space:pre-wrap;line-height:1.56}
 .memo-cell{display:flex;flex-direction:column;gap:6px}
-.memo-text{font-size:14.8px;color:#334155;white-space:pre-wrap;line-height:1.58}
+.memo-text{font-size:13px;color:#334155;white-space:pre-wrap;line-height:1.56}
 .memo-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
 .tag{display:inline-flex;align-items:center;padding:3px 10px;border-radius:999px;font-size:11.5px;font-weight:500;line-height:1.4}
 .tag-dept{background:var(--dept-bg);color:var(--dept-fg)}
 .law-line{font-size:12px;color:var(--law-fg);line-height:1.5}
 .law-line .law-name{display:inline-block;padding:2px 9px;border-radius:999px;background:var(--law-bg);color:var(--law-fg);font-weight:500;margin-right:4px}
 .law-line + .law-line{margin-top:3px}
+.tags-toggle{display:inline-flex;align-items:center;gap:3px;margin-top:4px;padding:2px 7px;border-radius:999px;font-size:11px;color:#64748b;background:#f1f5f9;border:none;cursor:pointer;font-family:inherit;transition:background .12s}
+.tags-toggle:hover{background:#e2e8f0;color:#334155}
+.tags-collapsed .memo-tags{display:none}
+.user-memo-wrap{margin-top:5px}
+.user-memo-input{width:100%;border:0.5px solid #e2e8f0;border-radius:6px;padding:5px 8px;font-size:12px;color:#334155;background:#f8fafc;font-family:inherit;resize:none;line-height:1.5;transition:border-color .15s,background .15s;box-sizing:border-box;min-height:28px;overflow:hidden;scrollbar-width:none}
+.user-memo-input::-webkit-scrollbar{display:none}
+.user-memo-input:focus{outline:none;border-color:#93b7ed;background:#fff}
+.user-memo-input::placeholder{color:#b0bec5}
+.user-memo-saved{font-size:10.5px;color:#86efac;margin-top:2px;opacity:0;transition:opacity .3s}
+.side-month-card{background:#f0f7ff;border:0.5px solid #bfdbfe;border-radius:10px;padding:10px 12px;margin-bottom:10px}
+.side-month-card .smc-label{font-size:10.5px;font-weight:600;color:#64748b;letter-spacing:.02em;margin-bottom:4px}
+.side-month-card .smc-val{font-size:14px;font-weight:800;color:#1d4ed8;letter-spacing:-.02em;margin-bottom:7px}
+.side-month-card .smc-btns{display:flex;gap:5px}
+.smc-btn{flex:1;padding:4px 0;border-radius:6px;border:0.5px solid #dbe5f2;background:#fff;font-size:11px;font-weight:600;color:#334155;cursor:pointer;font-family:inherit;transition:background .12s,color .12s}
+.smc-btn:hover{background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe}
+.smc-btn.danger{color:#94a3b8}
+.smc-btn.danger:hover{color:#b42318;border-color:#ffd2cc;background:#fff8f7}
+.smc-notice{margin-top:6px;font-size:10.5px;color:#2563eb;display:flex;align-items:center;gap:4px}
+.smc-notice button{border:none;background:none;color:#2563eb;font-size:10.5px;font-weight:700;cursor:pointer;padding:0;font-family:inherit;text-decoration:underline}
 .empty{padding:40px;text-align:center;color:var(--muted)}
 .footer{margin-top:24px;padding:12px 4px;font-size:11px;color:var(--muted2);letter-spacing:.02em}
 .footer .org{font-weight:600;color:var(--muted)}
@@ -149,7 +170,7 @@ h1{font-size:22px;margin:0 0 4px 0;letter-spacing:-.03em;color:#0f172a}
   .thead{top:158px;grid-template-columns:42px 82px 82px 1fr;}
   .row{grid-template-columns:42px 82px 82px 1fr;}
   .thead > div:nth-child(5),.row > div:nth-child(5){grid-column:1/-1;border-top:1px dashed var(--wrks-viz-border);padding-top:10px}
-  .routine-check{width:17px;height:17px}
+  .routine-check{width:16px;height:16px}
 }
 </style>
 </head>
@@ -179,6 +200,15 @@ h1{font-size:22px;margin:0 0 4px 0;letter-spacing:-.03em;color:#0f172a}
 
   <div class="main">
     <aside class="side">
+      <div class="side-month-card" id="side-month-card">
+        <div class="smc-label">✔ 확인 체크 기준월</div>
+        <div class="smc-val" id="smc-val-display"></div>
+        <div class="smc-btns">
+          <button class="smc-btn" type="button" onclick="changeCheckMonth()">월 변경</button>
+          <button class="smc-btn danger" type="button" onclick="resetCurrentCheckMonth()">초기화</button>
+        </div>
+        <div id="smc-notice"></div>
+      </div>
       <h3>언제 하는 업무인가요?</h3>
       <div id="period-list"></div>
       <div class="divider"></div>
@@ -243,6 +273,22 @@ function readCheckedSet(){
   catch(e){ return new Set(); }
 }
 function writeCheckedSet(set){ localStorage.setItem(checkedStorageKey(), JSON.stringify([...set])); }
+function userMemoKey(no){ return `hakdolUserMemo-${no}`; }
+function readUserMemo(no){ return localStorage.getItem(userMemoKey(no)) || ''; }
+function saveUserMemo(no, val){
+  if(val.trim()) localStorage.setItem(userMemoKey(no), val);
+  else localStorage.removeItem(userMemoKey(no));
+}
+const _memoTimers = {};
+function onUserMemoInput(no, el){
+  clearTimeout(_memoTimers[no]);
+  _memoTimers[no] = setTimeout(()=>{
+    saveUserMemo(no, el.value);
+    const saved = el.parentElement.querySelector('.user-memo-saved');
+    if(saved){ saved.style.opacity='1'; setTimeout(()=>{ saved.style.opacity='0'; }, 1200); }
+  }, 500);
+}
+
 function routineKey(d){ return `${d.no}|${d.cat}|${d.date}|${d.task}`; }
 function toggleChecked(key, checked){
   const set = readCheckedSet();
@@ -370,6 +416,17 @@ function filterData(){
   return list;
 }
 
+function renderSideMonthCard(){
+  const valEl = document.getElementById('smc-val-display');
+  const noticeEl = document.getElementById('smc-notice');
+  if(valEl) valEl.textContent = monthLabel(ACTIVE_CHECK_MONTH);
+  if(noticeEl){
+    noticeEl.innerHTML = ACTIVE_CHECK_MONTH !== CURRENT_MONTH_KEY
+      ? `<div class="smc-notice">현재 달은 ${escapeHtml(monthLabel(CURRENT_MONTH_KEY))} <button type="button" onclick="startCurrentMonthCheck()">이 달로 전환</button></div>`
+      : '';
+  }
+}
+
 function renderFilterSummary(list){
   const el = document.getElementById('filter-summary');
   if(!el) return;
@@ -378,27 +435,16 @@ function renderFilterSummary(list){
   const sortLabel = ({default:'기본 순서', date:'일정 빠른 순', cat:'업무분장 순', task:'업무명 순'})[STATE.sort] || '기본 순서';
   const qLabel = STATE.q ? `검색어: ${escapeHtml(STATE.q)}` : '검색어 없음';
   const checkedCount = readCheckedSet().size;
-  const monthNotice = ACTIVE_CHECK_MONTH !== CURRENT_MONTH_KEY
-    ? `<span class="new-month-note">현재 달은 ${escapeHtml(monthLabel(CURRENT_MONTH_KEY))}이에요 <button type="button" onclick="startCurrentMonthCheck()">이 달 체크 시작</button></span>`
-    : '';
   el.innerHTML = `
     <div class="filter-summary-main">
       <div><strong>현재 보기</strong> · ${escapeHtml(catLabel)} / ${escapeHtml(periodLabel)} / ${escapeHtml(sortLabel)} / ${qLabel}</div>
-      <div class="check-month-bar">
-        <span class="cm-label">확인 체크 기준</span>
-        <span class="cm-value">${escapeHtml(monthLabel(ACTIVE_CHECK_MONTH))}</span>
-        <div class="cm-actions">
-          <button class="month-btn" type="button" onclick="changeCheckMonth()">기준월 변경</button>
-          <button class="month-btn danger" type="button" onclick="resetCurrentCheckMonth()">이번 달 체크 초기화</button>
-        </div>
-        ${monthNotice}
-      </div>
     </div>
     <div class="summary-tags">
       <span class="summary-tag">${list.length}개 표시</span>
       <span class="summary-tag">${checkedCount}개 체크</span>
       ${STATE.cats.length?`<span class="summary-tag">${STATE.cats.length}개 업무분장 선택</span>`:''}
     </div>`;
+  renderSideMonthCard();
 }
 
 function renderList(){
@@ -421,8 +467,14 @@ function renderList(){
     }).join('');
     const deptHtml = d.dept ? `<span class="tag tag-dept">${escapeHtml(d.dept)}</span>` : '';
     const memoTextHtml = d.memo ? `<div class="memo-text">${escapeHtml(d.memo)}</div>` : '';
-    const tagsBlock = (deptHtml || lawsHtml) ? `<div class="memo-tags">${deptHtml}${lawsHtml}</div>` : '';
-    const memoCell = (memoTextHtml || tagsBlock) ? `${memoTextHtml}${tagsBlock}` : '<span style="color:var(--muted2);font-size:12px">—</span>';
+    const hasTagContent = (deptHtml || lawsHtml);
+    const tagsBlock = hasTagContent ? `<div class="memo-tags">${deptHtml}${lawsHtml}</div>` : '';
+    const toggleBtn = hasTagContent
+      ? `<button class="tags-toggle" type="button" onclick="this.closest('.memo-cell').classList.toggle('tags-collapsed');this.textContent=this.closest('.memo-cell').classList.contains('tags-collapsed')?'부서·법령 보기 ▾':'접기 ▴'">접기 ▴</button>`
+      : '';
+    const userMemoVal = escapeHtml(readUserMemo(d.no));
+    const userMemoHtml = `<div class="user-memo-wrap"><textarea class="user-memo-input" rows="1" placeholder="내 메모 추가..." oninput="onUserMemoInput(${d.no},this);this.style.height='auto';this.style.height=this.scrollHeight+'px'">${userMemoVal}</textarea><div class="user-memo-saved">저장됨 ✓</div></div>`;
+    const memoCell = `${userMemoHtml}${memoTextHtml}${tagsBlock}${toggleBtn}`;
     const key = routineKey(d);
     const isChecked = checkedSet.has(key);
 
@@ -437,6 +489,10 @@ function renderList(){
       <div class="memo-cell">${memoCell}</div>
     </div>`;
   }).join('');
+  // 기존 저장된 메모 textarea 높이 초기화
+  el.querySelectorAll('.user-memo-input').forEach(t=>{
+    if(t.value){ t.style.height='auto'; t.style.height=t.scrollHeight+'px'; }
+  });
 }
 
 function escapeHtml(s){
@@ -772,6 +828,44 @@ render(); resize();
     .thead{top:158px}
   }
 </style>
+<script>
+(function(){
+  function adjustStickyTops(){
+    const bar = document.querySelector('.hakdol-topbar-v202606');
+    if(!bar) return;
+    const bh = bar.offsetHeight;
+    // filter-summary: 바로 상단바 밑
+    const fs = document.querySelector('.filter-summary');
+    if(fs) fs.style.top = bh + 'px';
+    // toolbar top (sticky 아니지만 참고용)
+    // thead: filter-summary 높이까지 더함
+    const fsH = fs ? fs.offsetHeight : 0;
+    const thead = document.querySelector('.thead');
+    if(thead) thead.style.top = (bh + fsH) + 'px';
+    // sidebar
+    const side = document.querySelector('.hakdol-topbar-v202606') && document.querySelector('.side, .sidebar');
+    if(side && window.innerWidth > 900){
+      side.style.top = (bh + 8) + 'px';
+      side.style.maxHeight = 'calc(100vh - ' + (bh + 16) + 'px)';
+    }
+  }
+  // 로드 후, 리사이즈 시 재계산
+  function init(){
+    adjustStickyTops();
+    window.addEventListener('resize', adjustStickyTops, {passive:true});
+    // 상단바 높이 변화 감지 (wrap 변경 등)
+    const bar = document.querySelector('.hakdol-topbar-v202606');
+    if(bar && window.ResizeObserver){
+      new ResizeObserver(adjustStickyTops).observe(bar);
+    }
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else setTimeout(init, 0);
+  // render 훅 후에도 재계산
+  setTimeout(adjustStickyTops, 300);
+  setTimeout(adjustStickyTops, 800);
+})();
+</script>
 
 </body>
 </html>
