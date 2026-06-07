@@ -10,7 +10,7 @@
 ## 🔗 바로가기
 
 - 웹페이지: https://sen-vip.github.io/hakdol-routine
-- GitHub: https://github.com/sen-vip/hakdol_routine
+- GitHub: https://github.com/sen-vip/hakdol-routine
 
 ---
 
