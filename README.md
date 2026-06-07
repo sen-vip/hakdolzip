@@ -9,8 +9,8 @@
 
 ## 🔗 바로가기
 
-- 웹페이지: https://sen-vip.github.io/hakdol_routine.zip/
-- GitHub: https://github.com/sen-vip/hakdol_routine.zip
+- 웹페이지: https://sen-vip.github.io/hakdol_routine
+- GitHub: https://github.com/sen-vip/hakdol_routine
 
 ---
 
